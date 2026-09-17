@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MPLADS Guardian | Analytics</title>
+	<style>
+		:root {
+			--navy: #102f49;
+			--navy-2: #173f60;
+			--ink: #162b42;
+			--muted: #647286;
+			--line: #e5eaf0;
+			--canvas: #f5f7f9;
+			--white: #ffffff;
+			--blue: #2d6aa2;
+			--blue-soft: #eaf2fa;
+			--green: #188b62;
+			--red: #d74b4b;
+			--amber: #a36323;
+			font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+			color: var(--ink);
+		}
+
+		* { box-sizing: border-box; }
+		body { margin: 0; background: var(--canvas); }
+		button, input { font: inherit; }
+		button { cursor: pointer; }
+
+		.app { min-height: 100vh; display: flex; }
+		.sidebar {
+			width: 252px; flex: 0 0 252px; min-height: 100vh; padding: 22px 16px 18px;
+			background: var(--navy); color: #dbe7f1; display: flex; flex-direction: column;
+		}
+		.brand { display: flex; align-items: center; gap: 14px; padding: 0 14px 27px; }
+		.brand-mark { width: 38px; height: 48px; color: #fff; display: grid; place-items: center; }
+		.brand-mark svg { width: 32px; height: 44px; }
+		.brand-copy strong { display: block; font: 700 18px Georgia, "Times New Roman", serif; color: #fff; white-space: nowrap; }
+		.brand-copy span { display: block; font-size: 9px; color: #b6c7d7; margin-top: 4px; }
+		.nav { display: grid; gap: 5px; }
+		.nav a, .sidebar-bottom a {
+			color: #d5e1ec; text-decoration: none; display: flex; align-items: center; gap: 14px;
+			min-height: 43px; padding: 0 15px; border-radius: 6px; font-size: 12px; font-weight: 600;
+		}
+		.nav a.active { background: #2f6697; color: white; box-shadow: inset 0 1px #5885ac; }
+		.nav a:hover, .sidebar-bottom a:hover { background: #1b4567; }
+		.nav svg, .sidebar-bottom svg { width: 19px; height: 19px; stroke: currentColor; fill: none; stroke-width: 1.7; }
+		.sidebar-bottom { margin-top: auto; padding-top: 18px; border-top: 1px solid #486178; display: grid; gap: 4px; }
+		.version { font-size: 10px; color: #afc1d1; padding: 20px 1px 0; line-height: 1.6; }
+
+		.main { min-width: 0; flex: 1; }
+		.topbar { height: 72px; background: #fff; border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 28px; padding: 0 34px; }
+		.top-brand { display: flex; gap: 11px; align-items: center; min-width: 365px; }
+		.top-brand svg { width: 31px; height: 43px; color: var(--navy); }
+		.top-brand strong { font: 700 20px Georgia, "Times New Roman", serif; display: block; }
+		.top-brand span { font-size: 10px; color: var(--muted); display: block; margin-top: 3px; }
+		.search { height: 37px; max-width: 310px; flex: 1; border: 1px solid #dfe5eb; border-radius: 7px; display: flex; align-items: center; gap: 10px; padding: 0 12px; color: #7c8998; }
+		.search svg { width: 16px; }
+		.search input { border: 0; outline: 0; min-width: 0; width: 100%; font-size: 10px; color: var(--ink); }
+		.user-area { margin-left: auto; display: flex; align-items: center; gap: 13px; }
+		.bell { border: 0; background: none; color: var(--navy); position: relative; padding: 5px; }
+		.bell svg { width: 20px; }
+		.badge { position: absolute; right: -3px; top: -3px; background: #cf3f43; color: #fff; width: 15px; height: 15px; border-radius: 50%; font-size: 9px; display: grid; place-items: center; }
+		.avatar { width: 35px; height: 35px; border-radius: 50%; background: #687b90; color: #fff; display: grid; place-items: center; font-size: 12px; }
+		.user-copy { line-height: 1.35; min-width: 110px; }
+		.user-copy strong { display: block; font-size: 11px; }
+		.user-copy span { font-size: 10px; color: var(--muted); }
+		.chevron { width: 16px; color: var(--navy); }
+
+		.content { max-width: 1440px; margin: 0 auto; padding: 20px 33px 34px; }
+		.crumb { font-size: 11px; color: #768495; margin-bottom: 5px; }
+		.crumb b { color: var(--ink); }
+		.heading-row { display: flex; justify-content: space-between; align-items: end; margin-bottom: 15px; }
+		h1, h2 { margin: 0; font-family: Georgia, "Times New Roman", serif; color: var(--ink); }
+		h1 { font-size: 32px; line-height: 1.05; letter-spacing: -.4px; }
+		.subtitle { font-size: 13px; color: var(--muted); margin-top: 4px; }
+		.date-select, .small-select { border: 1px solid #dce3ea; border-radius: 7px; background: #fff; color: var(--ink); height: 34px; padding: 0 12px; font-size: 11px; display: flex; align-items: center; gap: 12px; }
+		.date-select svg, .small-select svg { width: 15px; color: #647589; }
+		.date-select { min-width: 213px; justify-content: space-between; }
+
+		.kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-bottom: 12px; }
+		.kpi { background: #fff; border: 1px solid #e9edf1; border-radius: 8px; min-height: 82px; display: flex; align-items: center; gap: 16px; padding: 12px 14px; box-shadow: 0 3px 12px rgba(25, 52, 76, .035); }
+		.kpi-icon { width: 45px; height: 48px; flex: 0 0 45px; display: grid; place-items: center; border-radius: 12px; background: var(--blue-soft); color: var(--navy); }
+		.kpi:nth-child(2) .kpi-icon { background: #fbe9e9; color: var(--red); }
+		.kpi:nth-child(3) .kpi-icon { background: #f7eee6; color: #955f29; }
+		.kpi-icon svg { width: 25px; height: 25px; stroke: currentColor; fill: none; stroke-width: 1.7; }
+		.kpi-body { min-width: 0; flex: 1; }
+		.metric { display: flex; align-items: baseline; gap: 17px; white-space: nowrap; }
+		.metric strong { font: 700 20px Georgia, "Times New Roman", serif; }
+		.delta { font-size: 10px; font-weight: 700; color: var(--green); }
+		.delta.red { color: var(--red); }
+		.kpi-label { font-size: 10px; color: var(--muted); margin-top: 2px; }
+
+		.panel { background: #fff; border: 1px solid #e7ebef; border-radius: 8px; box-shadow: 0 3px 13px rgba(25, 52, 76, .035); }
+		.trend { padding: 14px 17px 12px; margin-bottom: 12px; }
+		.panel-head { display: flex; align-items: start; justify-content: space-between; gap: 14px; }
+		h2 { font-size: 16px; }
+		.panel-note { color: var(--muted); font-size: 10px; margin-top: 3px; }
+		.controls { display: flex; gap: 10px; }
+		.segmented { display: flex; height: 28px; background: #edf1f4; border-radius: 7px; overflow: hidden; }
+		.segmented button { border: 0; padding: 0 15px; background: transparent; color: #34475c; font-size: 10px; }
+		.segmented button.active { background: var(--navy); color: #fff; border-radius: 6px; }
+		.small-select { height: 28px; min-width: 90px; justify-content: space-between; padding: 0 9px; }
+		.chart { height: 181px; margin-top: 9px; position: relative; padding: 9px 45px 25px 43px; }
+		.grid-lines { height: 100%; display: grid; grid-template-rows: repeat(5, 1fr); border-left: 1px solid #cad4de; border-bottom: 1px solid #cad4de; background: repeating-linear-gradient(to bottom, transparent 0, transparent calc(25% - 1px), #e8edf1 calc(25% - 1px), #e8edf1 25%); }
+		.bars { position: absolute; inset: 15px 47px 26px 44px; display: flex; align-items: end; justify-content: space-around; }
+		.bar { width: 30px; background: #c9dcf2; opacity: .88; }
+		.line { position: absolute; left: 44px; right: 45px; top: 19px; height: 128px; pointer-events: none; }
+		.line svg { width: 100%; height: 100%; overflow: visible; }
+		.axis-y { position: absolute; left: 4px; top: 7px; bottom: 27px; display: flex; flex-direction: column; justify-content: space-between; color: #5e6e80; font-size: 9px; }
+		.axis-x { position: absolute; left: 43px; right: 44px; bottom: 5px; display: flex; justify-content: space-around; color: #5e6e80; font-size: 9px; }
+		.legend { display: flex; justify-content: center; gap: 22px; color: #596a7d; font-size: 10px; margin-top: 2px; }
+		.legend span { display: flex; align-items: center; gap: 6px; }
+		.dot { width: 9px; height: 9px; border-radius: 50%; background: #c9dcf2; }
+		.dot.blue { background: var(--navy); }.dot.brown { background: #996124; }
+
+		.overview { padding: 14px 17px 11px; }
+		.overview-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 14px; }
+		.overview-tools { display: flex; gap: 10px; }
+		.overview-tools .search { flex: none; width: 195px; height: 31px; }
+		.overview-tools .small-select { height: 31px; min-width: 112px; }
+		.overview-grid { display: grid; grid-template-columns: minmax(0, 1fr) 254px; gap: 13px; }
+		table { width: 100%; border-collapse: separate; border-spacing: 0; overflow: hidden; border: 1px solid #e9edf1; border-radius: 8px; font-size: 10px; }
+		th { height: 30px; text-align: left; font-weight: 600; color: #32455a; background: #edf2f6; padding: 0 10px; }
+		td { height: 29px; padding: 0 10px; border-top: 1px solid #edf0f3; color: #34475c; }
+		tr td:first-child, tr th:first-child { padding-left: 11px; width: 34px; }
+		td.critical { color: var(--red); }.status { display: inline-block; padding: 3px 9px; border-radius: 10px; font-size: 9px; }.high { color: #bd4a4a; background: #f9dddd; }.review { color: #aa6a1f; background: #f8ebd7; }.stable { color: #288263; background: #dcefe8; }
+		.view { color: #2c6caa; font-weight: 600; white-space: nowrap; }
+		.map-panel { border: 1px solid #e9edf1; border-radius: 8px; padding: 12px 15px; background: linear-gradient(135deg, #fff, #f8fafc); }
+		.map-title { font: 700 14px Georgia, "Times New Roman", serif; }.map-sub { color: var(--muted); font-size: 10px; margin-top: 3px; }
+		.map-content { display: flex; align-items: center; gap: 3px; margin-top: 5px; }.map-svg { width: 145px; height: 135px; }.map-svg path { stroke: #fff; stroke-width: 1.4; }.shade-1 { fill: #d5e5f7; }.shade-2 { fill: #9fbedf; }.shade-3 { fill: #5884ae; }.shade-4 { fill: #1e4f78; }
+		.scale { display: grid; gap: 8px; font-size: 9px; color: #5f7083; }.scale span { display: flex; align-items: center; gap: 7px; white-space: nowrap; }.scale i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+
+		@media (max-width: 1050px) { .sidebar { width: 207px; flex-basis: 207px; }.top-brand { min-width: 270px; }.content { padding-left: 20px; padding-right: 20px; }.overview-grid { grid-template-columns: 1fr; }.map-panel { min-height: 150px; }.map-content { justify-content: center; } }
+		@media (max-width: 760px) {
+			.app { display: block; }.sidebar { width: 100%; min-height: auto; padding: 10px 14px; }.brand { padding: 0 7px 10px; }.brand-mark { height: 38px; }.brand-mark svg { width: 26px; height: 34px; }.nav { display: flex; overflow-x: auto; gap: 4px; }.nav a { min-width: max-content; min-height: 36px; padding: 0 10px; }.nav a:not(.active) { display: none; }.sidebar-bottom, .version { display: none; }
+			.topbar { height: auto; padding: 12px 17px; flex-wrap: wrap; gap: 10px; }.top-brand { min-width: auto; flex: 1; }.top-brand strong { font-size: 17px; }.top-brand span { font-size: 9px; }.search { order: 3; max-width: none; flex-basis: 100%; }.user-copy { display: none; }.content { padding: 17px 13px 25px; }.heading-row { align-items: start; flex-direction: column; gap: 13px; }.kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }.kpi { gap: 9px; padding: 10px; }.kpi-icon { width: 37px; height: 38px; flex-basis: 37px; }.metric { gap: 7px; }.metric strong { font-size: 17px; }.controls, .overview-head, .overview-tools { flex-wrap: wrap; }.overview-tools .search { width: 100%; }.overview-tools { width: 100%; }.overview-tools .small-select { flex: 1; }.panel-head { flex-direction: column; }.chart { overflow-x: auto; min-width: 580px; }.trend { overflow: hidden; }.overview-grid { overflow: auto; } table { min-width: 700px; }.map-panel { min-width: 300px; }
+		}
+	</style>
+</head>
+<body>
+	<div class="app">
+		<aside class="sidebar">
+			<div class="brand">
+				<div class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 44"><path d="M16 3 11 8l2 4-5 3 3 4-5 4 4 3-2 7h16l-2-7 4-3-5-4 3-4-5-3 2-4zM10 36h12M12 40h8" stroke="currentColor" fill="none" stroke-width="1.3"/><circle cx="16" cy="11" r="2" fill="currentColor"/></svg></div>
+				<div class="brand-copy"><strong>MPLADS Guardian</strong><span>Transparent Development</span></div>
+			</div>
+			<nav class="nav" aria-label="Main navigation">
+				<a href="#"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Home</a>
+				<a class="active" href="#analytics"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h17M8 16v-5M13 16V7M18 16V4"/></svg>View Analytics</a>
+				<a href="#projects"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Projects</a>
+				<a href="#"><svg viewBox="0 0 24 24"><path d="m12 3 9 17H3zM12 9v5M12 17v.1"/></svg>Anomaly Center</a>
+				<a href="#"><svg viewBox="0 0 24 24"><path d="M5 12a7 7 0 0 1 12-4l2 2M19 12a7 7 0 0 1-12 4l-2-2M17 4v4h-4M7 20v-4h4"/></svg>Investigations</a>
+				<a href="#"><svg viewBox="0 0 24 24"><circle cx="7" cy="12" r="3"/><circle cx="17" cy="6" r="3"/><circle cx="17" cy="18" r="3"/><path d="m9.5 10.5 5-3M9.5 13.5l5 3"/></svg>Similar Works</a>
+				<a href="#"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.5"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M10 10 6.5 7.5M14 10l3.5-2.5M14 14l3.5 2.5"/></svg>Network Intelligence</a>
+				<a href="#"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>Data Quality</a>
+				<a href="#"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>Data Sources</a>
+				<a href="#"><svg viewBox="0 0 24 24"><rect x="5" y="6" width="14" height="13" rx="3"/><path d="M8 3v3M16 3v3M8 12h.1M12 12h.1M16 12h.1M8 16h.1M12 16h.1M16 16h.1"/></svg>Guardian AI</a>
+			</nav>
+			<div class="sidebar-bottom"><a href="#"><svg viewBox="0 0 24 24"><path d="M12 3 14 5l3-.3.8 2.8 2.5 1.7-1.5 2.5.5 2.9-2.9.6-1.7 2.4-2.7-1.4-2.6 1.4-1.7-2.4-2.9-.6.5-2.9L3.8 9.2l2.5-1.7L7 4.7l3 .3z"/><circle cx="12" cy="12" r="2.5"/></svg>Settings</a><a href="#"><svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5M15 12H3M20 4v16"/></svg>Logout</a><div class="version">MPLADS Guardian<br>v1.0.0</div></div>
+		</aside>
+
+		<main class="main">
+			<header class="topbar">
+				<div class="top-brand"><svg viewBox="0 0 32 44"><path d="M16 3 11 8l2 4-5 3 3 4-5 4 4 3-2 7h16l-2-7 4-3-5-4 3-4-5-3 2-4zM10 36h12M12 40h8" stroke="currentColor" fill="none" stroke-width="1.3"/><circle cx="16" cy="11" r="2" fill="currentColor"/></svg><div><strong>MPLADS Guardian</strong><span>Transparent Development. Stronger Governance.</span></div></div>
+				<label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="m16 16 4 4"/></svg><input placeholder="Search projects, districts, signals..." aria-label="Search"></label>
+				<div class="user-area"><button class="bell" aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><span class="badge">3</span></button><div class="avatar">AS</div><div class="user-copy"><strong>Amit Sharma</strong><span>Investigation Officer</span></div><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7 10 5 5 5-5"/></svg></div>
+			</header>
+			<div class="content" id="analytics">
+				<div class="crumb">Home&nbsp; › &nbsp;<b>Analytics</b></div>
+				<div class="heading-row"><div><h1>Analytics</h1><div class="subtitle">Explore insights, trends and state-wise performance of MPLADS projects.</div></div><button class="date-select"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>01 Jan 2024 – 12 Oct 2025<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7 10 5 5 5-5"/></svg></button></div>
+				<section class="kpis"><article class="kpi"><div class="kpi-icon"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6zM15 3v5h4M9 12h6M9 16h6"/></svg></div><div class="kpi-body"><div class="metric"><strong>12,482</strong><span class="delta">↑ +6%</span></div><div class="kpi-label">Total Projects</div><div class="kpi-label">vs previous period</div></div></article><article class="kpi"><div class="kpi-icon"><svg viewBox="0 0 24 24"><path d="m12 3 9 17H3zM12 9v5M12 17v.1"/></svg></div><div class="kpi-body"><div class="metric"><strong>1,276</strong><span class="delta red">↑ +12%</span></div><div class="kpi-label">Investigation Signals</div></div></article><article class="kpi"><div class="kpi-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></div><div class="kpi-body"><div class="metric"><strong>₹ 24,892 Cr</strong><span class="delta">↑ +11%</span></div><div class="kpi-label">Total Expenditure</div></div></article><article class="kpi"><div class="kpi-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><circle cx="5" cy="10" r="2"/><circle cx="19" cy="10" r="2"/><path d="M6 19c0-3 2-5 6-5s6 2 6 5M3 18c0-2 1-3 3-3M21 18c0-2-1-3-3-3"/></svg></div><div class="kpi-body"><div class="metric"><strong>707</strong></div><div class="kpi-label">Districts Covered</div><div class="kpi-label">All states</div></div></article></section>
+				<section class="panel trend"><div class="panel-head"><div><h2>Project &amp; Signal Trend</h2><div class="panel-note">Monthly trend of projects, expenditure and investigation signals</div></div><div class="controls"><div class="segmented"><button class="active">Projects</button><button>Expenditure</button><button>Signals</button></div><button class="small-select">Monthly<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7 10 5 5 5-5"/></svg></button></div></div><div class="chart"><div class="axis-y"><span>1,000</span><span>800</span><span>600</span><span>400</span><span>200</span><span>0</span></div><div class="grid-lines"></div><div class="bars"><i class="bar" style="height:37%"></i><i class="bar" style="height:40%"></i><i class="bar" style="height:44%"></i><i class="bar" style="height:49%"></i><i class="bar" style="height:51%"></i><i class="bar" style="height:57%"></i><i class="bar" style="height:64%"></i><i class="bar" style="height:68%"></i><i class="bar" style="height:76%"></i><i class="bar" style="height:84%"></i><i class="bar" style="height:91%"></i><i class="bar" style="height:91%"></i></div><div class="line"><svg viewBox="0 0 1000 128" preserveAspectRatio="none"><polyline points="30,103 115,98 198,94 285,86 370,83 456,77 542,67 628,59 712,56 798,43 884,22 970,29" fill="none" stroke="#173f60" stroke-width="2.1"/><polyline points="30,114 115,111 198,109 285,106 370,101 456,96 542,91 628,86 712,82 798,74 884,58 970,68" fill="none" stroke="#996124" stroke-width="2"/><g fill="#173f60"><circle cx="30" cy="103" r="3.2"/><circle cx="115" cy="98" r="3.2"/><circle cx="198" cy="94" r="3.2"/><circle cx="285" cy="86" r="3.2"/><circle cx="370" cy="83" r="3.2"/><circle cx="456" cy="77" r="3.2"/><circle cx="542" cy="67" r="3.2"/><circle cx="628" cy="59" r="3.2"/><circle cx="712" cy="56" r="3.2"/><circle cx="798" cy="43" r="3.2"/><circle cx="884" cy="22" r="3.2"/><circle cx="970" cy="29" r="3.2"/></g></svg></div><div class="axis-x"><span>Jan 2024</span><span>Feb 2024</span><span>Mar 2024</span><span>Apr 2024</span><span>May 2024</span><span>Jun 2024</span><span>Jul 2024</span><span>Aug 2024</span><span>Sep 2024</span><span>Oct 2024</span><span>Nov 2024</span><span>Dec 2024</span></div></div><div class="legend"><span><i class="dot"></i>Projects</span><span><i class="dot blue"></i>Total Signals</span><span><i class="dot brown"></i>High &amp; Critical Signals</span></div></section>
+				<section class="panel overview"><div class="overview-head"><div><h2>State-wise Overview</h2><div class="panel-note">Compare projects, signals and expenditure across states</div></div><div class="overview-tools"><label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="m16 16 4 4"/></svg><input placeholder="Search state..." aria-label="Search state"></label><button class="small-select">All States<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7 10 5 5 5-5"/></svg></button></div></div><div class="overview-grid"><div style="overflow:auto"><table><thead><tr><th>#</th><th>State</th><th>Projects</th><th>Signals</th><th>Critical</th><th>Expenditure (₹ Cr)</th><th>Status</th><th>Action</th></tr></thead><tbody><tr><td>1</td><td>Uttar Pradesh</td><td>1,842</td><td>248</td><td class="critical">62</td><td>3,482</td><td><span class="status high">High Attention</span></td><td class="view">View →</td></tr><tr><td>2</td><td>Maharashtra</td><td>1,276</td><td>186</td><td class="critical">41</td><td>2,981</td><td><span class="status review">Review</span></td><td class="view">View →</td></tr><tr><td>3</td><td>Bihar</td><td>1,104</td><td>142</td><td class="critical">38</td><td>2,104</td><td><span class="status review">Review</span></td><td class="view">View →</td></tr><tr><td>4</td><td>Madhya Pradesh</td><td>1,022</td><td>121</td><td class="critical">29</td><td>1,986</td><td><span class="status stable">Stable</span></td><td class="view">View →</td></tr><tr><td>5</td><td>Rajasthan</td><td>986</td><td>98</td><td class="critical">21</td><td>1,732</td><td><span class="status stable">Stable</span></td><td class="view">View →</td></tr><tr><td>6</td><td>Tamil Nadu</td><td>842</td><td>76</td><td class="critical">18</td><td>1,421</td><td><span class="status stable">Stable</span></td><td class="view">View →</td></tr></tbody></table></div><div class="map-panel"><div class="map-title">Signals by State</div><div class="map-sub">Click on a state to view details</div><div class="map-content"><svg class="map-svg" viewBox="0 0 150 160" aria-label="India signal map"><path class="shade-2" d="m43 11 16 3 7 12 17 3 12 12 20 3 7 18-10 13 7 17-17 10-5 19-14-3-9 17-16-8-9-17-15-4-4-15-10-4 2-15 11-8-2-15 10-5z"/><path class="shade-3" d="m38 43 16-2 7 12-8 13-15-2-8-10z"/><path class="shade-4" d="m48 69 17 2 9 15-7 15-14 7-10-10-11-3 4-15z"/><path class="shade-2" d="m74 96 15-5 10 12-8 16-16-4-7-10z"/><path class="shade-3" d="m38 105 13 5 5 17-9 11-11-9-8-13z"/><path class="shade-1" d="m91 52 12-6 10 8-5 13-14 1z"/></svg><div class="scale"><span><i style="background:#1e4f78"></i>&gt; 200</span><span><i style="background:#5884ae"></i>101 – 200</span><span><i style="background:#81a5c9"></i>51 – 100</span><span><i style="background:#9fbedf"></i>21 – 50</span><span><i style="background:#c0d6eb"></i>6 – 20</span><span><i style="background:#d5e5f7"></i>1 – 5</span><span><i style="background:#e9f0f7"></i>0</span></div></div></div></div></section>
+			</div>
+		</main>
+	</div>
+</body>
+</html>
