@@ -1,0 +1,1090 @@
+{
+  "states": [
+    {
+      "state": "Andhra Pradesh",
+      "members": [
+        {
+          "pc": 1,
+          "constituency": "Araku (ST)",
+          "mp": "Gumma Thanuja Rani",
+          "party": "YSRCP",
+          "associated_area": "Alluri Sitharama Raju / tribal region"
+        },
+        {
+          "pc": 2,
+          "constituency": "Srikakulam",
+          "mp": "Kinjarapu Ram Mohan Naidu",
+          "party": "TDP",
+          "associated_area": "Srikakulam"
+        },
+        {
+          "pc": 3,
+          "constituency": "Vizianagaram",
+          "mp": "Kalisetti Appala Naidu",
+          "party": "TDP",
+          "associated_area": "Vizianagaram"
+        },
+        {
+          "pc": 4,
+          "constituency": "Visakhapatnam",
+          "mp": "Mathukumilli Bharat",
+          "party": "TDP",
+          "associated_area": "Visakhapatnam"
+        },
+        {
+          "pc": 5,
+          "constituency": "Anakapalle",
+          "mp": "C. M. Ramesh",
+          "party": "BJP",
+          "associated_area": "Anakapalle"
+        },
+        {
+          "pc": 6,
+          "constituency": "Kakinada",
+          "mp": "Tangella Uday Srinivas",
+          "party": "Jana Sena Party",
+          "associated_area": "Kakinada"
+        },
+        {
+          "pc": 7,
+          "constituency": "Amalapuram (SC)",
+          "mp": "G. M. Harish Balayogi",
+          "party": "TDP",
+          "associated_area": "Dr. B. R. Ambedkar Konaseema"
+        },
+        {
+          "pc": 8,
+          "constituency": "Rajahmundry",
+          "mp": "Daggubati Purandeshwari",
+          "party": "BJP",
+          "associated_area": "East Godavari / Rajamahendravaram area"
+        },
+        {
+          "pc": 9,
+          "constituency": "Narasapuram",
+          "mp": "Bhupathi Raju Srinivasa Varma",
+          "party": "BJP",
+          "associated_area": "West Godavari / Eluru area"
+        },
+        {
+          "pc": 10,
+          "constituency": "Eluru",
+          "mp": "Putta Mahesh Kumar",
+          "party": "TDP",
+          "associated_area": "Eluru"
+        },
+        {
+          "pc": 11,
+          "constituency": "Machilipatnam",
+          "mp": "Balashowry Vallabhaneni",
+          "party": "Jana Sena Party",
+          "associated_area": "Krishna"
+        },
+        {
+          "pc": 12,
+          "constituency": "Vijayawada",
+          "mp": "Kesineni Sivanath",
+          "party": "TDP",
+          "associated_area": "NTR"
+        },
+        {
+          "pc": 13,
+          "constituency": "Guntur",
+          "mp": "Pemmasani Chandra Sekhar",
+          "party": "TDP",
+          "associated_area": "Guntur"
+        },
+        {
+          "pc": 14,
+          "constituency": "Narasaraopet",
+          "mp": "Lavu Srikrishna Devarayalu",
+          "party": "TDP",
+          "associated_area": "Palnadu"
+        },
+        {
+          "pc": 15,
+          "constituency": "Bapatla (SC)",
+          "mp": "Tenneti Krishna Prasad",
+          "party": "TDP",
+          "associated_area": "Bapatla"
+        },
+        {
+          "pc": 16,
+          "constituency": "Ongole",
+          "mp": "Magunta Sreenivasulu Reddy",
+          "party": "TDP",
+          "associated_area": "Prakasam"
+        },
+        {
+          "pc": 17,
+          "constituency": "Nandyal",
+          "mp": "Dr. Byreddy Shabari",
+          "party": "TDP",
+          "associated_area": "Nandyal"
+        },
+        {
+          "pc": 18,
+          "constituency": "Kurnool",
+          "mp": "Bastipati Nagaraju Panchalingala",
+          "party": "TDP",
+          "associated_area": "Kurnool"
+        },
+        {
+          "pc": 19,
+          "constituency": "Ananthapur",
+          "mp": "Ambica G. Lakshminarayana Valmiki",
+          "party": "TDP",
+          "associated_area": "Ananthapuramu"
+        },
+        {
+          "pc": 20,
+          "constituency": "Hindupur",
+          "mp": "B. K. Parthasarathi",
+          "party": "TDP",
+          "associated_area": "Sri Sathya Sai / Ananthapuramu area"
+        },
+        {
+          "pc": 21,
+          "constituency": "Kadapa",
+          "mp": "Y. S. Avinash Reddy",
+          "party": "YSRCP",
+          "associated_area": "YSR Kadapa"
+        },
+        {
+          "pc": 22,
+          "constituency": "Nellore",
+          "mp": "Prabhakar Reddy Vemireddy",
+          "party": "TDP",
+          "associated_area": "SPSR Nellore"
+        },
+        {
+          "pc": 23,
+          "constituency": "Tirupati (SC)",
+          "mp": "Maddila Gurumoorthy",
+          "party": "YSRCP",
+          "associated_area": "Tirupati"
+        },
+        {
+          "pc": 24,
+          "constituency": "Rajampet",
+          "mp": "P. V. Mithun Reddy",
+          "party": "YSRCP",
+          "associated_area": "Annamayya / YSR Kadapa area"
+        },
+        {
+          "pc": 25,
+          "constituency": "Chittoor (SC)",
+          "mp": "Daggumalla Prasada Rao",
+          "party": "TDP",
+          "associated_area": "Chittoor"
+        }
+      ]
+    },
+    {
+      "state": "Arunachal Pradesh",
+      "members": [
+        {
+          "pc": 1,
+          "constituency": "Arunachal West",
+          "mp": "Kiren Rijiju",
+          "party": "BJP",
+          "associated_area": "Tawang, West Kameng, East Kameng, Papum Pare, Lower Subansiri, Kurung Kumey, Kra Daadi, Upper Subansiri, Kamle, Leparada, West Siang, Shi Yomi"
+        },
+        {
+          "pc": 2,
+          "constituency": "Arunachal East",
+          "mp": "Tapir Gao",
+          "party": "BJP",
+          "associated_area": "Upper Siang, East Siang, Lower Siang, Dibang Valley, Lower Dibang Valley, Lohit, Anjaw, Namsai, Changlang, Tirap, Longding"
+        }
+      ]
+    },
+    {
+      "state": "Assam",
+      "members": [
+        {
+          "pc": 1,
+          "constituency": "Kokrajhar (ST)",
+          "mp": "Joyanta Basumatary",
+          "party": "UPPL",
+          "associated_area": "Kokrajhar / BTR area"
+        },
+        {
+          "pc": 2,
+          "constituency": "Dhubri",
+          "mp": "Rakibul Hussain",
+          "party": "INC",
+          "associated_area": "Dhubri / South Salmara-Mankachar area"
+        },
+        {
+          "pc": 3,
+          "constituency": "Barpeta",
+          "mp": "Phani Bhusan Choudhury",
+          "party": "AGP",
+          "associated_area": "Barpeta / Bajali area"
+        },
+        {
+          "pc": 4,
+          "constituency": "Darrang-Udalguri",
+          "mp": "Dilip Saikia",
+          "party": "BJP",
+          "associated_area": "Darrang / Udalguri area"
+        },
+        {
+          "pc": 5,
+          "constituency": "Guwahati",
+          "mp": "Bijuli Kalita Medhi",
+          "party": "BJP",
+          "associated_area": "Kamrup Metropolitan / Guwahati area"
+        },
+        {
+          "pc": 6,
+          "constituency": "Diphu (ST)",
+          "mp": "Amarsing Tisso",
+          "party": "BJP",
+          "associated_area": "Karbi Anglong / West Karbi Anglong / Dima Hasao area"
+        },
+        {
+          "pc": 7,
+          "constituency": "Karimganj",
+          "mp": "Kripanath Mallah",
+          "party": "BJP",
+          "associated_area": "Karimganj / Barak Valley area"
+        },
+        {
+          "pc": 8,
+          "constituency": "Silchar (SC)",
+          "mp": "Parimal Suklabaidya",
+          "party": "BJP",
+          "associated_area": "Cachar / Silchar area"
+        },
+        {
+          "pc": 9,
+          "constituency": "Nagaon",
+          "mp": "Pradyut Bordoloi",
+          "party": "INC",
+          "associated_area": "Nagaon / Hojai area"
+        },
+        {
+          "pc": 10,
+          "constituency": "Kaziranga",
+          "mp": "Kamakhya Prasad Tasa",
+          "party": "BJP",
+          "associated_area": "Golaghat / Kaziranga area"
+        },
+        {
+          "pc": 11,
+          "constituency": "Sonitpur",
+          "mp": "Ranjit Dutta",
+          "party": "BJP",
+          "associated_area": "Sonitpur / Biswanath area"
+        },
+        {
+          "pc": 12,
+          "constituency": "Lakhimpur",
+          "mp": "Pradan Baruah",
+          "party": "BJP",
+          "associated_area": "Lakhimpur / Dhemaji area"
+        },
+        {
+          "pc": 13,
+          "constituency": "Dibrugarh",
+          "mp": "Sarbananda Sonowal",
+          "party": "BJP",
+          "associated_area": "Dibrugarh / Tinsukia area"
+        },
+        {
+          "pc": 14,
+          "constituency": "Jorhat",
+          "mp": "Gaurav Gogoi",
+          "party": "INC",
+          "associated_area": "Jorhat / Sivasagar area"
+        }
+      ]
+    },
+    {
+      "state": "Bihar",
+      "members": [
+        {
+          "pc": 1,
+          "constituency": "Valmiki Nagar",
+          "mp": "Sunil Kumar",
+          "party": "JD(U)",
+          "associated_area": "West Champaran"
+        },
+        {
+          "pc": 2,
+          "constituency": "Paschim Champaran",
+          "mp": "Dr. Sanjay Jaiswal",
+          "party": "BJP",
+          "associated_area": "West Champaran"
+        },
+        {
+          "pc": 3,
+          "constituency": "Purvi Champaran",
+          "mp": "Radha Mohan Singh",
+          "party": "BJP",
+          "associated_area": "East Champaran"
+        },
+        {
+          "pc": 4,
+          "constituency": "Sheohar",
+          "mp": "Lovely Anand",
+          "party": "JD(U)",
+          "associated_area": "Sheohar"
+        },
+        {
+          "pc": 5,
+          "constituency": "Sitamarhi",
+          "mp": "Devesh Chandra Thakur",
+          "party": "JD(U)",
+          "associated_area": "Sitamarhi"
+        },
+        {
+          "pc": 6,
+          "constituency": "Madhubani",
+          "mp": "Ashok Kumar Yadav",
+          "party": "BJP",
+          "associated_area": "Madhubani"
+        },
+        {
+          "pc": 7,
+          "constituency": "Jhanjharpur",
+          "mp": "Ramprit Mandal",
+          "party": "JD(U)",
+          "associated_area": "Madhubani"
+        },
+        {
+          "pc": 8,
+          "constituency": "Supaul",
+          "mp": "Dileshwar Kamait",
+          "party": "JD(U)",
+          "associated_area": "Supaul"
+        },
+        {
+          "pc": 9,
+          "constituency": "Araria",
+          "mp": "Pradeep Kumar Singh",
+          "party": "BJP",
+          "associated_area": "Araria"
+        },
+        {
+          "pc": 10,
+          "constituency": "Kishanganj",
+          "mp": "Mohammad Jawed",
+          "party": "INC",
+          "associated_area": "Kishanganj"
+        },
+        {
+          "pc": 11,
+          "constituency": "Katihar",
+          "mp": "Tariq Anwar",
+          "party": "INC",
+          "associated_area": "Katihar"
+        },
+        {
+          "pc": 12,
+          "constituency": "Purnia",
+          "mp": "Rajesh Ranjan (Pappu Yadav)",
+          "party": "Independent",
+          "associated_area": "Purnia"
+        },
+        {
+          "pc": 13,
+          "constituency": "Madhepura",
+          "mp": "Dinesh Chandra Yadav",
+          "party": "JD(U)",
+          "associated_area": "Madhepura"
+        },
+        {
+          "pc": 14,
+          "constituency": "Darbhanga",
+          "mp": "Gopal Jee Thakur",
+          "party": "BJP",
+          "associated_area": "Darbhanga"
+        },
+        {
+          "pc": 15,
+          "constituency": "Muzaffarpur",
+          "mp": "Raj Bhushan Choudhary",
+          "party": "BJP",
+          "associated_area": "Muzaffarpur"
+        },
+        {
+          "pc": 16,
+          "constituency": "Vaishali",
+          "mp": "Veena Devi",
+          "party": "LJP (Ram Vilas)",
+          "associated_area": "Vaishali"
+        },
+        {
+          "pc": 17,
+          "constituency": "Gopalganj (SC)",
+          "mp": "Dr. Alok Kumar Suman",
+          "party": "JD(U)",
+          "associated_area": "Gopalganj"
+        },
+        {
+          "pc": 18,
+          "constituency": "Siwan",
+          "mp": "Vijaylakshmi Devi",
+          "party": "JD(U)",
+          "associated_area": "Siwan"
+        },
+        {
+          "pc": 19,
+          "constituency": "Maharajganj",
+          "mp": "Janardan Singh \"Sigriwal\"",
+          "party": "BJP",
+          "associated_area": "Saran"
+        },
+        {
+          "pc": 20,
+          "constituency": "Saran",
+          "mp": "Rajiv Pratap Rudy",
+          "party": "BJP",
+          "associated_area": "Saran"
+        },
+        {
+          "pc": 21,
+          "constituency": "Hajipur (SC)",
+          "mp": "Chirag Paswan",
+          "party": "LJP (Ram Vilas)",
+          "associated_area": "Vaishali"
+        },
+        {
+          "pc": 22,
+          "constituency": "Ujiarpur",
+          "mp": "Nityanand Rai",
+          "party": "BJP",
+          "associated_area": "Samastipur"
+        },
+        {
+          "pc": 23,
+          "constituency": "Samastipur (SC)",
+          "mp": "Shambhavi",
+          "party": "LJP (Ram Vilas)",
+          "associated_area": "Samastipur"
+        },
+        {
+          "pc": 24,
+          "constituency": "Begusarai",
+          "mp": "Giriraj Singh",
+          "party": "BJP",
+          "associated_area": "Begusarai"
+        },
+        {
+          "pc": 25,
+          "constituency": "Khagaria",
+          "mp": "Rajesh Verma",
+          "party": "LJP (Ram Vilas)",
+          "associated_area": "Khagaria"
+        },
+        {
+          "pc": 26,
+          "constituency": "Bhagalpur",
+          "mp": "Ajay Kumar Mandal",
+          "party": "JD(U)",
+          "associated_area": "Bhagalpur"
+        },
+        {
+          "pc": 27,
+          "constituency": "Banka",
+          "mp": "Giridhari Yadav",
+          "party": "JD(U)",
+          "associated_area": "Banka"
+        },
+        {
+          "pc": 28,
+          "constituency": "Munger",
+          "mp": "Rajiv Ranjan Singh (Lalan Singh)",
+          "party": "JD(U)",
+          "associated_area": "Munger"
+        },
+        {
+          "pc": 29,
+          "constituency": "Nalanda",
+          "mp": "Kaushalendra Kumar",
+          "party": "JD(U)",
+          "associated_area": "Nalanda"
+        },
+        {
+          "pc": 30,
+          "constituency": "Patna Sahib",
+          "mp": "Ravi Shankar Prasad",
+          "party": "BJP",
+          "associated_area": "Patna"
+        },
+        {
+          "pc": 31,
+          "constituency": "Pataliputra",
+          "mp": "Misha Bharti",
+          "party": "RJD",
+          "associated_area": "Patna"
+        },
+        {
+          "pc": 32,
+          "constituency": "Arrah",
+          "mp": "Sudama Prasad",
+          "party": "CPI(ML) Liberation",
+          "associated_area": "Bhojpur"
+        },
+        {
+          "pc": 33,
+          "constituency": "Buxar",
+          "mp": "Sudhakar Singh",
+          "party": "RJD",
+          "associated_area": "Buxar"
+        },
+        {
+          "pc": 34,
+          "constituency": "Sasaram (SC)",
+          "mp": "Manoj Kumar",
+          "party": "INC",
+          "associated_area": "Rohtas"
+        },
+        {
+          "pc": 35,
+          "constituency": "Karakat",
+          "mp": "Raja Ram Singh",
+          "party": "CPI(ML) Liberation",
+          "associated_area": "Rohtas / Aurangabad area"
+        },
+        {
+          "pc": 36,
+          "constituency": "Jahanabad",
+          "mp": "Surendra Prasad Yadav",
+          "party": "RJD",
+          "associated_area": "Jehanabad"
+        },
+        {
+          "pc": 37,
+          "constituency": "Aurangabad",
+          "mp": "Abhay Kumar Sinha",
+          "party": "RJD",
+          "associated_area": "Aurangabad"
+        },
+        {
+          "pc": 38,
+          "constituency": "Gaya (SC)",
+          "mp": "Jitan Ram Manjhi",
+          "party": "HAM(S)",
+          "associated_area": "Gaya"
+        },
+        {
+          "pc": 39,
+          "constituency": "Nawada",
+          "mp": "Vivek Thakur",
+          "party": "BJP",
+          "associated_area": "Nawada"
+        },
+        {
+          "pc": 40,
+          "constituency": "Jamui (SC)",
+          "mp": "Arun Bharti",
+          "party": "LJP (Ram Vilas)",
+          "associated_area": "Jamui"
+        }
+      ]
+    },
+    {
+      "state": "Chhattisgarh",
+      "members": [
+        {
+          "pc": 1,
+          "constituency": "Surguja (ST)",
+          "mp": "Chintamani Maharaj",
+          "party": "BJP",
+          "associated_area": "Surguja / Balrampur / Jashpur area"
+        },
+        {
+          "pc": 2,
+          "constituency": "Raigarh (ST)",
+          "mp": "Radheshyam Rathia",
+          "party": "BJP",
+          "associated_area": "Raigarh / Sarangarh-Bilaigarh area"
+        },
+        {
+          "pc": 3,
+          "constituency": "Janjgir-Champa (SC)",
+          "mp": "Kamlesh Jangde",
+          "party": "BJP",
+          "associated_area": "Janjgir-Champa / Sakti area"
+        },
+        {
+          "pc": 4,
+          "constituency": "Korba",
+          "mp": "Jyotsna Mahant",
+          "party": "INC",
+          "associated_area": "Korba"
+        },
+        {
+          "pc": 5,
+          "constituency": "Bilaspur",
+          "mp": "Tokhan Sahu",
+          "party": "BJP",
+          "associated_area": "Bilaspur"
+        },
+        {
+          "pc": 6,
+          "constituency": "Rajnandgaon",
+          "mp": "Santosh Pandey",
+          "party": "BJP",
+          "associated_area": "Rajnandgaon / Khairagarh-Chhuikhadan-Gandai area"
+        },
+        {
+          "pc": 7,
+          "constituency": "Durg",
+          "mp": "Vijay Baghel",
+          "party": "BJP",
+          "associated_area": "Durg / Bhilai area"
+        },
+        {
+          "pc": 8,
+          "constituency": "Raipur",
+          "mp": "Brijmohan Agrawal",
+          "party": "BJP",
+          "associated_area": "Raipur"
+        },
+        {
+          "pc": 9,
+          "constituency": "Mahasamund",
+          "mp": "Roop Kumari Choudhary",
+          "party": "BJP",
+          "associated_area": "Mahasamund / Gariaband area"
+        },
+        {
+          "pc": 10,
+          "constituency": "Bastar (ST)",
+          "mp": "Mahesh Kashyap",
+          "party": "BJP",
+          "associated_area": "Bastar / Kondagaon / Dantewada area"
+        },
+        {
+          "pc": 11,
+          "constituency": "Kanker (ST)",
+          "mp": "Bhojraj Nag",
+          "party": "BJP",
+          "associated_area": "Kanker / North Bastar area"
+        }
+      ]
+    },
+    {
+      "state": "Goa",
+      "members": [
+        {
+          "pc": 1,
+          "constituency": "North Goa",
+          "mp": "Shripad Yesso Naik",
+          "party": "BJP",
+          "associated_area": "North Goa / Panaji area"
+        },
+        {
+          "pc": 2,
+          "constituency": "South Goa",
+          "mp": "Viriato Fernandes",
+          "party": "INC",
+          "associated_area": "South Goa / Margao area"
+        }
+      ]
+    },
+    {
+      "state": "Haryana",
+      "members": [
+        {
+          "pc": 1,
+          "constituency": "Ambala (SC)",
+          "mp": "Varun Chaudhry",
+          "party": "INC",
+          "associated_area": "Ambala / Panchkula"
+        },
+        {
+          "pc": 2,
+          "constituency": "Kurukshetra",
+          "mp": "Naveen Jindal",
+          "party": "BJP",
+          "associated_area": "Kurukshetra / Kaithal"
+        },
+        {
+          "pc": 3,
+          "constituency": "Sirsa (SC)",
+          "mp": "Kumari Selja",
+          "party": "INC",
+          "associated_area": "Sirsa / Fatehabad"
+        },
+        {
+          "pc": 4,
+          "constituency": "Hisar",
+          "mp": "Jai Parkash",
+          "party": "INC",
+          "associated_area": "Hisar"
+        },
+        {
+          "pc": 5,
+          "constituency": "Karnal",
+          "mp": "Manohar Lal",
+          "party": "BJP",
+          "associated_area": "Karnal / Panipat"
+        },
+        {
+          "pc": 6,
+          "constituency": "Sonipat",
+          "mp": "Satpal Brahmachari",
+          "party": "INC",
+          "associated_area": "Sonipat"
+        },
+        {
+          "pc": 7,
+          "constituency": "Rohtak",
+          "mp": "Deepender Singh Hooda",
+          "party": "INC",
+          "associated_area": "Rohtak / Jhajjar"
+        },
+        {
+          "pc": 8,
+          "constituency": "Bhiwani-Mahendragarh",
+          "mp": "Dharambir Singh",
+          "party": "BJP",
+          "associated_area": "Bhiwani / Charkhi Dadri / Mahendragarh"
+        },
+        {
+          "pc": 9,
+          "constituency": "Gurgaon",
+          "mp": "Rao Inderjit Singh",
+          "party": "BJP",
+          "associated_area": "Gurugram / Rewari / Nuh"
+        },
+        {
+          "pc": 10,
+          "constituency": "Faridabad",
+          "mp": "Krishan Pal",
+          "party": "BJP",
+          "associated_area": "Faridabad / Palwal"
+        }
+      ]
+    },
+    {
+      "state": "Himachal Pradesh",
+      "members": [
+        {
+          "pc": 1,
+          "constituency": "Kangra",
+          "mp": "Rajeev Bhardwaj",
+          "party": "BJP",
+          "associated_area": "Kangra / Chamba area"
+        },
+        {
+          "pc": 2,
+          "constituency": "Mandi",
+          "mp": "Kangana Ranaut",
+          "party": "BJP",
+          "associated_area": "Mandi / Kullu / Lahaul-Spiti area"
+        },
+        {
+          "pc": 3,
+          "constituency": "Hamirpur",
+          "mp": "Anurag Singh Thakur",
+          "party": "BJP",
+          "associated_area": "Hamirpur / Una / Bilaspur"
+        },
+        {
+          "pc": 4,
+          "constituency": "Shimla (SC)",
+          "mp": "Suresh Kumar Kashyap",
+          "party": "BJP",
+          "associated_area": "Shimla / Sirmaur / Solan area"
+        }
+      ]
+    },
+    {
+      "state": "Jharkhand",
+      "members": [
+        {
+          "pc": 1,
+          "constituency": "Rajmahal (ST)",
+          "mp": "Vijay Kumar Hansdak",
+          "party": "JMM",
+          "associated_area": "Sahibganj / Pakur"
+        },
+        {
+          "pc": 2,
+          "constituency": "Dumka (ST)",
+          "mp": "Nalin Soren",
+          "party": "JMM",
+          "associated_area": "Dumka / Jamtara"
+        },
+        {
+          "pc": 3,
+          "constituency": "Godda",
+          "mp": "Nishikant Dubey",
+          "party": "BJP",
+          "associated_area": "Godda / Deoghar"
+        },
+        {
+          "pc": 4,
+          "constituency": "Chatra (SC)",
+          "mp": "Kali Charan Singh",
+          "party": "BJP",
+          "associated_area": "Chatra / Latehar / Palamu"
+        },
+        {
+          "pc": 5,
+          "constituency": "Kodarma",
+          "mp": "Annapurna Devi",
+          "party": "BJP",
+          "associated_area": "Koderma / Giridih"
+        },
+        {
+          "pc": 6,
+          "constituency": "Giridih",
+          "mp": "Chandra Prakash Choudhary",
+          "party": "AJSU Party",
+          "associated_area": "Giridih / Bokaro"
+        },
+        {
+          "pc": 7,
+          "constituency": "Dhanbad",
+          "mp": "Dulu Mahato",
+          "party": "BJP",
+          "associated_area": "Dhanbad"
+        },
+        {
+          "pc": 8,
+          "constituency": "Ranchi",
+          "mp": "Sanjay Seth",
+          "party": "BJP",
+          "associated_area": "Ranchi / Khunti area"
+        },
+        {
+          "pc": 9,
+          "constituency": "Jamshedpur",
+          "mp": "Bidyut Baran Mahato",
+          "party": "BJP",
+          "associated_area": "East Singhbhum / Jamshedpur"
+        },
+        {
+          "pc": 10,
+          "constituency": "Singhbhum (ST)",
+          "mp": "Joba Majhi",
+          "party": "JMM",
+          "associated_area": "West Singhbhum / Saraikela-Kharsawan"
+        },
+        {
+          "pc": 11,
+          "constituency": "Khunti (ST)",
+          "mp": "Kalicharan Munda",
+          "party": "INC",
+          "associated_area": "Khunti / Simdega area"
+        },
+        {
+          "pc": 12,
+          "constituency": "Lohardaga (ST)",
+          "mp": "Sukhdeo Bhagat",
+          "party": "INC",
+          "associated_area": "Lohardaga / Gumla"
+        },
+        {
+          "pc": 13,
+          "constituency": "Palamu (SC)",
+          "mp": "Vishnu Dayal Ram",
+          "party": "BJP",
+          "associated_area": "Palamu / Garhwa"
+        },
+        {
+          "pc": 14,
+          "constituency": "Hazaribagh",
+          "mp": "Manish Jaiswal",
+          "party": "BJP",
+          "associated_area": "Hazaribagh / Ramgarh"
+        }
+      ]
+    },
+    {
+      "state": "Gujarat",
+      "members": [
+        {
+          "pc": 1,
+          "constituency": "Kachchh (SC)",
+          "mp": "Vinodbhai Chavda",
+          "party": "BJP",
+          "associated_area": "Kachchh"
+        },
+        {
+          "pc": 2,
+          "constituency": "Banaskantha",
+          "mp": "Geniben Thakor",
+          "party": "INC",
+          "associated_area": "Banaskantha"
+        },
+        {
+          "pc": 3,
+          "constituency": "Patan",
+          "mp": "Bharatsinhji Dabhi",
+          "party": "BJP",
+          "associated_area": "Patan"
+        },
+        {
+          "pc": 4,
+          "constituency": "Mahesana",
+          "mp": "Haribhai Patel",
+          "party": "BJP",
+          "associated_area": "Mahesana"
+        },
+        {
+          "pc": 5,
+          "constituency": "Sabarkantha",
+          "mp": "Shobhanaben Mahendrasinh Baraiya",
+          "party": "BJP",
+          "associated_area": "Sabarkantha"
+        },
+        {
+          "pc": 6,
+          "constituency": "Gandhinagar",
+          "mp": "Amit Shah",
+          "party": "BJP",
+          "associated_area": "Gandhinagar"
+        },
+        {
+          "pc": 7,
+          "constituency": "Ahmedabad East",
+          "mp": "Hasmukh Patel",
+          "party": "BJP",
+          "associated_area": "Ahmedabad"
+        },
+        {
+          "pc": 8,
+          "constituency": "Ahmedabad West (SC)",
+          "mp": "Dineshbhai Kodarbhai Makwana",
+          "party": "BJP",
+          "associated_area": "Ahmedabad"
+        },
+        {
+          "pc": 9,
+          "constituency": "Surendranagar",
+          "mp": "Chandubhai Chhaganbhai Shihora",
+          "party": "BJP",
+          "associated_area": "Surendranagar"
+        },
+        {
+          "pc": 10,
+          "constituency": "Rajkot",
+          "mp": "Parshottam Rupala",
+          "party": "BJP",
+          "associated_area": "Rajkot"
+        },
+        {
+          "pc": 11,
+          "constituency": "Porbandar",
+          "mp": "Mansukh Mandaviya",
+          "party": "BJP",
+          "associated_area": "Porbandar"
+        },
+        {
+          "pc": 12,
+          "constituency": "Jamnagar",
+          "mp": "Poonamben Maadam",
+          "party": "BJP",
+          "associated_area": "Jamnagar"
+        },
+        {
+          "pc": 13,
+          "constituency": "Junagadh",
+          "mp": "Rajesh Chudasama",
+          "party": "BJP",
+          "associated_area": "Junagadh"
+        },
+        {
+          "pc": 14,
+          "constituency": "Amreli",
+          "mp": "Bharatbhai Manubhai Sutariya",
+          "party": "BJP",
+          "associated_area": "Amreli"
+        },
+        {
+          "pc": 15,
+          "constituency": "Bhavnagar",
+          "mp": "Nimu Bambhania",
+          "party": "BJP",
+          "associated_area": "Bhavnagar"
+        },
+        {
+          "pc": 16,
+          "constituency": "Anand",
+          "mp": "Mitesh Rameshbhai Patel",
+          "party": "BJP",
+          "associated_area": "Anand"
+        },
+        {
+          "pc": 17,
+          "constituency": "Kheda",
+          "mp": "Devusinh Jesingbhai Chauhan",
+          "party": "BJP",
+          "associated_area": "Kheda"
+        },
+        {
+          "pc": 18,
+          "constituency": "Panchmahal",
+          "mp": "Rajpalsinh Mahendrasinh Jadhav",
+          "party": "BJP",
+          "associated_area": "Panchmahal"
+        },
+        {
+          "pc": 19,
+          "constituency": "Dahod (ST)",
+          "mp": "Jasvantsinh Sumanbhai Bhabhor",
+          "party": "BJP",
+          "associated_area": "Dahod"
+        },
+        {
+          "pc": 20,
+          "constituency": "Vadodara",
+          "mp": "Hemang Yogeshchandra Joshi",
+          "party": "BJP",
+          "associated_area": "Vadodara"
+        },
+        {
+          "pc": 21,
+          "constituency": "Chhota Udaipur (ST)",
+          "mp": "Jashubhai Rathwa",
+          "party": "BJP",
+          "associated_area": "Chhota Udaipur"
+        },
+        {
+          "pc": 22,
+          "constituency": "Bharuch",
+          "mp": "Mansukhbhai Vasava",
+          "party": "BJP",
+          "associated_area": "Bharuch"
+        },
+        {
+          "pc": 23,
+          "constituency": "Bardoli (ST)",
+          "mp": "Parbhubhai Vasava",
+          "party": "BJP",
+          "associated_area": "Surat / Tapi area"
+        },
+        {
+          "pc": 24,
+          "constituency": "Surat",
+          "mp": "Mukesh Dalal",
+          "party": "BJP",
+          "associated_area": "Surat"
+        },
+        {
+          "pc": 25,
+          "constituency": "Navsari",
+          "mp": "C. R. Patil",
+          "party": "BJP",
+          "associated_area": "Navsari"
+        },
+        {
+          "pc": 26,
+          "constituency": "Valsad (ST)",
+          "mp": "Dhaval Patel",
+          "party": "BJP",
+          "associated_area": "Valsad"
+        }
+      ]
+    }
+  ]
+}
