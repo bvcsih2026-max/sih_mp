@@ -1,6 +1,7 @@
-const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "http://127.0.0.1:8000/api";
+const API_BASE = globalThis.__MPLADS_API_BASE__ || "/api";
 
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
+  if (!API_BASE) throw new Error("Backend URL is not configured. Set VITE_API_BASE_URL in Vercel.");
   const response = await fetch(`${API_BASE}${path}`, { headers: { "Content-Type": "application/json", ...(options?.headers ?? {}) }, ...options });
   if (!response.ok) throw new Error((await response.text()) || `Request failed: ${response.status}`);
   return response.json() as Promise<T>;

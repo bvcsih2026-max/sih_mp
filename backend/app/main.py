@@ -8,6 +8,7 @@ import io
 import json
 from sqlalchemy import select
 from sqlalchemy.orm import Session
+import os
 
 from .analysis.pipeline import run_analysis
 from .database import Base, engine, get_db
@@ -16,7 +17,8 @@ from .schemas import AnalyzeResponse, InvestigationOut, MPInput, MPOut, ProjectI
 
 Base.metadata.create_all(bind=engine)
 app = FastAPI(title="MPLADS Guardian API", version="1.0.0")
-app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"], allow_methods=["*"], allow_headers=["*"])
+allowed_origins = [origin.strip() for origin in os.getenv("FRONTEND_URLS", "http://localhost:5173,http://127.0.0.1:5173").split(",") if origin.strip()]
+app.add_middleware(CORSMiddleware, allow_origins=allowed_origins, allow_methods=["*"], allow_headers=["*"], allow_credentials=False)
 
 
 @app.get("/api/health")
